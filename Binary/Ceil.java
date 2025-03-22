@@ -2,9 +2,9 @@ package Binary;
 
 public class Ceil {
     public static void main(String args[]) {
-        int[] arr = { 'c', 'f', 'j' };
+        int[] arr = { 'c', 'f', 'g' };
 
-        int ans = ceilChar(arr, 'e');
+        int ans = ceilChar(arr, 'a');
         System.out.println("KEY " + ans);
     }
 
@@ -36,7 +36,7 @@ public class Ceil {
         int start = 0;
         int end = arr.length - 1;
         if (target > arr[end]) {
-            return -1;
+            return 0;
         }
         while (start <= end) {
             // find mid
