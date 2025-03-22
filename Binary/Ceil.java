@@ -4,7 +4,7 @@ public class Ceil {
     public static void main(String args[]) {
         int[] arr = { 'c', 'f', 'g' };
 
-        int ans = ceilChar(arr, 'a');
+        int ans = ceilChar(arr, 'c');
         System.out.println("KEY " + ans);
     }
 
@@ -43,7 +43,7 @@ public class Ceil {
             int mid = start + (end - start) / 2;
 
             if (arr[mid] == target) {
-                return mid;
+                return mid + 1;
             } else if (target > arr[mid]) {
                 start = mid + 1;
             } else {
