@@ -1,6 +1,7 @@
 public class SubArraySum {
     public static void main(String args[]) {
         int arr[] = { 1, 2, 1, 2, 1, 5, 4, 9, 5, 9, 4, 6, 2, 3, 1 };
+
         int answer = Answer(arr);
         System.out.println(answer);
     }
