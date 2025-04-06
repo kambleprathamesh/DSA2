@@ -32,7 +32,7 @@ package Binary;
 
 public class PeakElement {
     public static void main(String args[]) {
-        int arr[] = { 10, 5, 4, 3, 2, 1, 4, 5, 10 };
+        int arr[] = { 1, 2, 3, 4, 5, 3, 2, 1 };
         int index = PeakElement(arr);
         if (index == -1) {
             System.out.println("Peak Index: " + index + " & Peak Element: 0");
@@ -43,6 +43,34 @@ public class PeakElement {
     }
 
     static int PeakElement(int[] arr) {
+        int index = -1;
+        int start = 0, end = arr.length;
+
+        while (start <= end) {
+            // cal mid
+            int mid = start + (end - start) / 2;
+            if (mid + 1 > arr.length - 1) {
+                return mid;
+            } else if (mid - 1 == -1) {
+                return mid;
+            }
+            if (arr[mid] > arr[mid + 1]) {
+                // check for adjascent elements also
+                if (arr[mid - 1] > arr[mid]) {
+                    end = mid - 1;
+                } else {
+                    return mid;
+                }
+
+            } else {
+                start = mid + 1;
+            }
+        }
+
+        return index;
+    }
+
+    static int leastElement(int[] arr) {
         int index = -1;
         int start = 0, end = arr.length;
 
